@@ -1,4 +1,17 @@
 {
   "packages": [
+    {
+        "name": "e-modal",
+        "version": "1.0.3",
+        "description": "Accessible modal dialogs with focus trap, animations, and keyboard navigation out of the box.",
+        "tags": ["ui", "a11y"],
+        "snippets": {
+          "script": "<script src=\"https://e-cdn.github.io/libs/modal/v1_app.js\"></script>"
+        },
+        "links": {
+          "docs": "https://e-cdn.github.io/info/es_modal",
+          "demo": "https://e-cdn.github.io/demo/modal"
+        }
+      },
   ]
 }
