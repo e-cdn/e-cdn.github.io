@@ -1,7 +1,7 @@
 // ─── DATA FETCH ───────────────────────────────────────────────────────────────
 async function loadData() {
   try {
-    const res = await fetch('./data.json');
+    const res = await fetch('./db/data.json');
     return await res.json();
   } catch {
     // fallback demo data when running locally without a server
