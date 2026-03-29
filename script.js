@@ -59,12 +59,12 @@ function demoData() {
         "description": "Accessible modal dialogs with focus trap, animations, and keyboard navigation out of the box.",
         "tags": ["ui", "a11y"],
         "snippets": {
-          "script": "<script src=\"https://e-cdn.github.io/libs/e-modal/1.0.3/e-modal.min.js\"><\/script>",
-          "css": "<link rel=\"stylesheet\" href=\"https://e-cdn.github.io/libs/e-modal/1.0.3/e-modal.min.css\">"
+          "script": "<script src=\"https://e-cdn.github.io/libs/modal/v1_app.js\"></script>",
+          "css": "No style here"
         },
         "links": {
-          "docs": "https://github.com/e-cdn/e-modal",
-          "demo": "https://e-cdn.github.io/demo/e-modal"
+          "docs": "https://e-cdn.github.io/info/es_modal",
+          "demo": "https://e-cdn.github.io/demo/modal"
         }
       },
       {
