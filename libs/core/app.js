@@ -1,64 +1,22 @@
-// === MINI FRAMEWORK SPA + OFFLINE ===
+// === e-core (app.js) ===
 (() => {
 
-  const VERSION = "v1";
-  const CACHE = "eapp-cache-" + VERSION;
-
   // =========================
-  // SERVICE WORKER INLINE
+  // SERVICE WORKER
   // =========================
   async function registerSW() {
     if (!('serviceWorker' in navigator)) return;
 
-    const swCode = `
-      const CACHE = "${CACHE}";
-
-      self.addEventListener("install", e => {
-        self.skipWaiting();
-      });
-
-      self.addEventListener("activate", e => {
-        e.waitUntil(clients.claim());
-      });
-
-      self.addEventListener("fetch", e => {
-        const url = new URL(e.request.url);
-
-        // evitar cachear APIs
-        if (url.pathname.startsWith("/api")) return;
-
-        e.respondWith(
-          caches.match(e.request).then(res => {
-            return res || fetch(e.request).then(fetchRes => {
-              return caches.open(CACHE).then(cache => {
-                cache.put(e.request, fetchRes.clone());
-                return fetchRes;
-              });
-            }).catch(() => {
-              // fallback offline básico
-              if (e.request.destination === "document") {
-                return new Response("<h1>Offline</h1>", {
-                  headers: { "Content-Type": "text/html" }
-                });
-              }
-            });
-          })
-        );
-      });
-    `;
-
-    const blob = new Blob([swCode], { type: "text/javascript" });
-    const swURL = URL.createObjectURL(blob);
-
     try {
-      await navigator.serviceWorker.register(swURL);
+      await navigator.serviceWorker.register('/sw.js');
+      console.log("SW registrado");
     } catch (e) {
       console.warn("SW error:", e);
     }
   }
 
   // =========================
-  // ROUTER SPA
+  // ROUTER
   // =========================
   const routes = {};
 
@@ -102,34 +60,21 @@
   }
 
   // =========================
-  // COMPONENTES SIMPLES
-  // =========================
-  function component(fn) {
-    return fn;
-  }
-
-  // =========================
-  // AUTO INIT
+  // INIT
   // =========================
   async function init() {
     await registerSW();
-
-    // rutas básicas por defecto
-    route("/", () => "<h1>Home</h1>");
-    route("/about", () => "<h1>About</h1>");
-
     render();
   }
 
   init();
 
   // =========================
-  // API GLOBAL
+  // API
   // =========================
   window.eapp = {
     route,
-    navigate,
-    component
+    navigate
   };
 
 })();
