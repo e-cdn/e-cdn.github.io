@@ -1,0 +1,86 @@
+{
+  "packages": [
+    {
+      "name": "e-router",
+      "version": "1.2.0",
+      "description": "Tiny client-side router with zero dependencies. Hash and history mode support.",
+      "tags": ["routing", "spa"],
+      "snippets": {
+        "script": "<script src=\"https://e-cdn.github.io/libs/e-router/1.2.0/e-router.min.js\"></script>",
+        "esm": "import Router from 'https://e-cdn.github.io/libs/e-router/1.2.0/e-router.esm.js'"
+      },
+      "links": {
+        "docs": "https://github.com/e-cdn/e-router",
+        "npm": "https://npmjs.com/package/e-router"
+      }
+    },
+    {
+      "name": "e-fetch",
+      "version": "0.9.1",
+      "description": "Lightweight fetch wrapper with automatic retries, timeout, and JSON handling.",
+      "tags": ["http", "utils"],
+      "snippets": {
+        "script": "<script src=\"https://e-cdn.github.io/libs/e-fetch/0.9.1/e-fetch.min.js\"></script>",
+        "esm": "import { eFetch } from 'https://e-cdn.github.io/libs/e-fetch/0.9.1/e-fetch.esm.js'"
+      },
+      "links": {
+        "docs": "https://github.com/e-cdn/e-fetch"
+      }
+    },
+    {
+      "name": "e-store",
+      "version": "2.0.0",
+      "description": "Reactive state store with subscriptions. No build step needed, works anywhere.",
+      "tags": ["state", "reactive"],
+      "snippets": {
+        "script": "<script src=\"https://e-cdn.github.io/libs/e-store/2.0.0/e-store.min.js\"></script>",
+        "esm": "import { createStore } from 'https://e-cdn.github.io/libs/e-store/2.0.0/e-store.esm.js'"
+      },
+      "links": {
+        "docs": "https://github.com/e-cdn/e-store",
+        "npm": "https://npmjs.com/package/e-store"
+      }
+    },
+    {
+      "name": "e-modal",
+      "version": "1.0.3",
+      "description": "Accessible modal dialogs with focus trap, animations, and keyboard navigation out of the box.",
+      "tags": ["ui", "a11y"],
+      "snippets": {
+        "script": "<script src=\"https://e-cdn.github.io/libs/e-modal/1.0.3/e-modal.min.js\"></script>",
+        "css": "<link rel=\"stylesheet\" href=\"https://e-cdn.github.io/libs/e-modal/1.0.3/e-modal.min.css\">"
+      },
+      "links": {
+        "docs": "https://github.com/e-cdn/e-modal",
+        "demo": "https://e-cdn.github.io/demo/e-modal"
+      }
+    },
+    {
+      "name": "e-animate",
+      "version": "0.5.0",
+      "description": "CSS animation helpers and a tiny JS API for chaining and sequencing transitions.",
+      "tags": ["animation", "css"],
+      "snippets": {
+        "css": "<link rel=\"stylesheet\" href=\"https://e-cdn.github.io/libs/e-animate/0.5.0/e-animate.min.css\">",
+        "esm": "import { animate } from 'https://e-cdn.github.io/libs/e-animate/0.5.0/e-animate.esm.js'"
+      },
+      "links": {
+        "docs": "https://github.com/e-cdn/e-animate"
+      }
+    },
+    {
+      "name": "e-form",
+      "version": "1.1.2",
+      "description": "Form validation library with custom rules, async validators, and zero runtime deps.",
+      "tags": ["forms", "validation"],
+      "snippets": {
+        "script": "<script src=\"https://e-cdn.github.io/libs/e-form/1.1.2/e-form.min.js\"></script>",
+        "esm": "import { useForm } from 'https://e-cdn.github.io/libs/e-form/1.1.2/e-form.esm.js'"
+      },
+      "links": {
+        "docs": "https://github.com/e-cdn/e-form",
+        "npm": "https://npmjs.com/package/e-form"
+      }
+    }
+  ]
+}
